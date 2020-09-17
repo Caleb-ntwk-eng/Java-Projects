@@ -1,0 +1,15 @@
+class Main {
+  public static void main(String[] args) {
+    System.out.println("I have a spelling checker.");
+    System.out.println("It came with my pea sea.");
+    System.out.println("");
+    System.out.println("It plane lee marks four my revue");
+    System.out.println("Miss steaks eye can knot sea.");
+    System.out.println("");
+    System.out.println("Eye ran this poem threw it.");
+    System.out.println("Your sure reel glad two no.");
+    System.out.println("");
+    System.out.println("Its vary polished in its weigh,");
+    System.out.println("My checker tolled me sew.");
+  }
+}
