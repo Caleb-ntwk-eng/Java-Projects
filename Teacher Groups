@@ -1,0 +1,11 @@
+ import java.util.Scanner;
+class Main {
+ public static void main(String[] args) {
+   Scanner input = new Scanner (System.in);
+   System.out.println("What is the total number of teachers?");
+   int numOfTeachers=input.nextInt();
+   System.out.println("How many teachers do you want in each group?");
+   int teachersPerGroup=input.nextInt();
+   System.out.println("There will be "+(numOfTeachers/teachersPerGroup)+" groups with "+(numOfTeachers%teachersPerGroup)+" teachers in reserve.");
+ }
+}
