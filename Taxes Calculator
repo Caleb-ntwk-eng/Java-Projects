@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class Main {
+ public static void main(String[] args) {
+Scanner input=new Scanner (System.in);
+System.out.println("Please enter your annual salary. (No symbols or commas).");
+double salary = input.nextDouble();
+double monthlyGross=(salary/12);
+double fIT=(salary*0.111);
+double sIT=(salary*0.0475);
+double fICA=(salary*0.0765);
+double annualTaxes=(fIT+sIT+fICA);
+System.out.println("Monthly Gross Pay\t\t\tFIT\t\t\tSIT\t\t\tFICA\t\t\tAnnual Taxes Paid");
+System.out.println(monthlyGross+"\t\t\t"+fIT+"\t\t"+sIT+"\t\t"+fICA+"\t\t\t"+annualTaxes);
+ }
+}
