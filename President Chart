@@ -1,0 +1,14 @@
+class Main {
+  public static void main(String[] args) {
+    System.out.println("");
+   System.out.println("");
+   System.out.println("");
+    System.out.println("\t\t\t\t\t\tPRESIDENT\t\t\tYEAR ELECTED");
+    System.out.println("");
+    System.out.println("\t\t\t\t\t\t1800\t\t\t\tJefferson");
+    System.out.println("");
+    System.out.println("\t\t\t\t\t\t1900\t\t\t\tMcKinley");
+    System.out.println("");
+    System.out.println("\t\t\t\t\t\t2000\t\t\t\tGeorge W. Bush");
+     }
+    }
