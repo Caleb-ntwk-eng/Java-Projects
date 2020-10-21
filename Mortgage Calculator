@@ -1,0 +1,22 @@
+import java.text.*;
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner input=new Scanner(System.in);
+    System.out.println("How much does your new home cost?");
+    int houseCost=input.nextInt();
+    System.out.println("What is the length of your mortgage in years?");
+    int years=input.nextInt();
+    System.out.println("What is your mortgage rate? (ex: 0.035 - do not use a percent sign).");
+    double mortgageRate=input.nextDouble();
+    double interest=(houseCost*mortgageRate*years);
+    double payoff=(houseCost+interest);
+    int months=(years*12);
+    double perMonth=(payoff/months);
+    DecimalFormat costOfHome=new DecimalFormat("$###,###,###");
+    DecimalFormat mortgageLength=new DecimalFormat("## years");
+    DecimalFormat mortgageRat=new DecimalFormat("#.00%");
+    DecimalFormat payoffAmount=new DecimalFormat("$###,###,###.00");
+    System.out.println("Cost of New Home\t\t\tMortgage Length\t\t\tMortgage Rate\t\t\tPayoff Amount\n"+costOfHome.format(houseCost)+"\t\t\t\t\t"+mortgageLength.format(years)+"\t\t\t\t"+mortgageRat.format(mortgageRate)+"\t\t\t\t\t"+payoffAmount.format(payoff));
+  }
+}
