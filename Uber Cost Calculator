@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.text.*;
+class Main {
+ public static void main(String[] args) {
+   Scanner input=new Scanner(System.in);
+   System.out.println("Please enter the number of miles the ride is.");
+   int distance=input.nextInt();
+   double perMileCost=0;
+   if (distance<10){
+     perMileCost=.3;
+   }
+     else{
+       perMileCost=.4;
+     }
+double standardCost=3.50;
+double costOne=.43;
+double costTwo=.4;
+double milageCost=0;
+milageCost=(perMileCost*distance);
+double totalFee=0;
+totalFee=(standardCost+milageCost);
+DecimalFormat money=new DecimalFormat("$##0.00");
+System.out.println("Base Ride\t\t\t\t"+money.format(standardCost)+"\nTrip Distance\t\t\t"+distance+" miles\nMileage Cost\t\t\t"+money.format(milageCost)+"\nTotal UBER Fee\t\t\t"+money.format(totalFee));
+ }
+}
