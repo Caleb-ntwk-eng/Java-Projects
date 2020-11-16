@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.text.*;
+class Main {
+public static void main(String[] args) {
+ Scanner input=new Scanner(System.in);
+ System.out.println("Please enter your age.");
+ int age=input.nextInt();
+ int heartRate=0;
+if(age<20){
+ heartRate=200;
+}
+else if(age>=20&&age>30){
+ heartRate=190;
+}
+else if(age>=30&&age<35){
+ heartRate=185;
+}
+else{
+ heartRate=150;
+}
+System.out.println("You are "+age+" years old. Your max heart rate is "+heartRate+" BPM.");
+}
+}
