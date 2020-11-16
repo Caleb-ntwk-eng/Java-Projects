@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.text.*;
+class Main {
+public static void main(String[] args) {
+Scanner input=new Scanner(System.in);
+System.out.println("Please the length of side one.");
+int sideOne=input.nextInt();
+System.out.println("Please the length of side two.");
+int sideTwo=input.nextInt();
+System.out.println("Please the length of side three.");
+int sideThree=input.nextInt();
+if (sideOne+sideTwo>sideThree&&sideOne+sideThree>sideTwo&&sideTwo+sideThree>sideOne){
+if(sideOne==sideTwo&&sideTwo==sideThree){
+System.out.println("The triangle is an equilateral triangle.");
+}
+else if(sideOne==sideTwo||sideTwo==sideThree||sideOne==sideThree){
+  System.out.println("The triangle is an isosceles triangle.");
+}
+else{
+  System.out.println("The triangle is a scalene triangle.");
+}
+}
+else{
+System.out.println("That is not a triangle.");
+}
+}
+}
