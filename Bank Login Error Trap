@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.text.*;
+class Main {
+ public static void main(String[] args) {
+ Scanner input=new Scanner(System.in);
+ String password="pa$$word123";
+ String questionAnswer="Bubbles";
+ String userPassword;
+ String userQuestionAnswer;
+ do{
+   System.out.println("Please enter your password.");
+   userPassword=input.nextLine();
+ }
+ while(!userPassword.equals(password));
+ do{
+ System.out.println("What is the name of your fist pet?");
+ userQuestionAnswer=input.nextLine();
+ }
+ while(!userQuestionAnswer.equalsIgnoreCase(questionAnswer));
+ System.out.println("Welcome to the KeyBank Online Banking Portal.");
+}
+}
