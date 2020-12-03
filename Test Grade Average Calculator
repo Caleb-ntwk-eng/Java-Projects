@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.text.*;
+class Main {
+public static void main(String[] args) {
+  Scanner input=new Scanner(System.in);
+  System.out.println("How many test grades would you like to enter?");
+  int numOfTests=input.nextInt();
+  int x=0;
+  int testNum=1;
+  int sum=0;
+  while (x<numOfTests){
+  System.out.println("Please enter test grade "+testNum+".");
+  int testGrade=input.nextInt();
+  x=x+1;
+  testNum=testNum+1;
+  sum=sum+testGrade;
+  }
+  double average=(sum/numOfTests);
+  DecimalFormat avg=new DecimalFormat("#0.00");
+  System.out.println("Average: "+avg.format(average)+"%");
+}
+}
