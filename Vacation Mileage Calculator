@@ -1,0 +1,48 @@
+import java.util.Scanner;
+import java.text.*;
+class Main {
+  public static void main(String[] args) {
+    Scanner input=new Scanner(System.in);
+    //Initializing Variables
+  int leg=1;
+  int miles=0;
+  String start;
+  String end;
+  int hours=0;
+  int gallons=0;
+  int totalMiles=0;
+  int totalGallons=0;
+  int totalHours=0;
+//Leg
+System.out.println("How many miles did you travel for leg #"+leg+"? (-99 to exit)");
+  miles=input.nextInt();
+  while(miles!=-99){
+  input=new Scanner(System.in);
+  System.out.println("Where did you start?");
+  start=input.nextLine();
+  System.out.println("Where did you end?");
+  end=input.nextLine();
+  System.out.println("How many hours did it take?");
+  hours=input.nextInt();
+  System.out.println("How many gallons of gas did you use?");
+  gallons=input.nextInt();
+  totalMiles=totalMiles+miles;
+  totalGallons=totalGallons+gallons;
+  totalHours=totalHours+hours;
+  System.out.println("Leg: "+leg);
+  System.out.println("Starting City\t\t"+start);
+  System.out.println("Destination\t\t"+end);
+  System.out.println("Miles: "+miles+"\t\tTotal Miles Traveled: "+totalMiles);
+  System.out.println("Gallons: "+gallons+"\t\tTotal Gallons Purchased: "+totalGallons);
+  System.out.println("Hours: "+hours+"\t\tTotal Traveled Hours: "+totalHours);
+  leg=leg+1;
+  System.out.println("How many miles did you travel for leg #"+leg+"? (-99 to exit)");
+  miles=input.nextInt();
+  }
+//Totals
+System.out.println("Total Trip Miles: "+totalMiles);
+System.out.println("Total Gallons: "+totalGallons);
+System.out.println("Total Trip Hours: "+totalHours);
+System.out.println("You Made It - The Atlantic to the Pacific!");
+  }
+}
