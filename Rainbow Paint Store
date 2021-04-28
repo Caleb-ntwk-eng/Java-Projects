@@ -1,0 +1,73 @@
+import java.util.Scanner;
+import java.text.*;
+class Main {
+  public static void main(String[] args) {
+          Scanner input=new Scanner(System.in);
+        int paintColor;
+        double gallons;
+        double orangeGallons;
+        double blueGallons;
+        infoMenu();
+        do{
+        System.out.println("\nWhat color paint would you like to order?\n1 - Orange\n2 - Blue\n3 - Orange and Blue.");
+        paintColor=input.nextInt();
+        }
+        while(paintColor!=1&&paintColor!=2&&paintColor!=3);
+        if(paintColor==3){
+        do{
+        System.out.println("How many gallons of orange would you like to order?");
+        orangeGallons=input.nextDouble();
+        orangePaint(orangeGallons);
+        }
+        while(orangeGallons<=0);  
+        do{
+        System.out.println("How many gallons of blue would you like to order?");
+        blueGallons=input.nextDouble();
+        bluePaint(blueGallons);
+        }
+        while(orangeGallons<=0);  
+        }
+        else{
+        do{
+        System.out.println("How many gallons would you like to order?");
+        gallons=input.nextInt();
+        if(paintColor==1){
+          singlePaintOrange(gallons);
+        }
+        else{
+          singlePaintBlue(gallons);
+        }
+        }
+        while(gallons<=0);
+        }
+    }
+    public static void infoMenu(){
+      for(int x=0; x<40; x++){
+          System.out.print("*");
+      }
+          System.out.println("\n\t\tRAINBOW PAINT STORE");
+          System.out.println("\t\t123 Colour Ave");
+          System.out.println("\t\t Palette, NY 12345");
+          System.out.println("\t\twww.RainbowPaints.com");
+          System.out.println("\t\tTwitter - @RainbowPaint");
+      for (int x=0; x<40; x++){
+          System.out.print("*");
+          }
+        }
+        public static double orangePaint(double orangeGallons){
+          double orangePaintCost=orangeGallons*29.95;
+          return(orangePaintCost);
+        }
+        public static double bluePaint(double blueGallons){
+            double bluePaintCost=blueGallons*31.95;
+            return(bluePaintCost);
+          }
+       public static double singlePaintOrange(double gallons){
+          double singlePaintCostOrange=gallons*29.95;
+          return(singlePaintCostOrange);
+        }
+        public static double singlePaintBlue(double gallons){
+            double singlePaintCostBlue=gallons*31.95;
+            return(singlePaintCostBlue);
+    }
+}
